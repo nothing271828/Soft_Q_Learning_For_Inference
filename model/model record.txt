@@ -1,0 +1,32 @@
+model 01.pth
+最原始的版本
+参数：
+environment: DyckNTaskEnvironment
+input_vocabulary_size: 10
+output_vocabulary_size: 7
+sentence_length: 10
+gamma = 0.95
+learning_rate = 0.001
+tau = 0.005
+buffer_size: 10000
+number_episodes = 5000
+batch_size = 256
+beta = 5
+question_length = 4
+
+model 01-1.pth
+在model 01的基础上训练，参数一样
+
+model 01-2.pth
+在model 01-1的基础上训练，只改变beta值
+beta = 5
+
+
+model 02.pth
+QNetwork 中q网络采用QLayer2
+
+model 02-1.pth
+在model 02的基础上训练，参数一样
+
+model 02-2.pth
+在model 02的基础上训练， number_episodes = 10000
